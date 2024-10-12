@@ -1,0 +1,159 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+
+.header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+.detalle-pelicula {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 1500px;
+}
+
+
+h2 {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+
+.poster-pelicula img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.info-pelicula {
+    flex: 1;
+    padding: 20px;
+}
+
+.titulo-pelicula {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.fecha-lanzamiento, .duracion, .genero {
+    margin: 5px 0;
+}
+
+.info-pelicula h3 {
+    margin-top: 20px;
+}
+
+
+.seccion-artistas {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    background: white;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+}
+
+.seccion-artistas h2 {
+    margin-bottom: 20px 0;
+}
+
+.artistas {
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.artista {
+    margin: 10px;
+    flex-basis: auto;
+    position: relative;
+    width: 150px;
+    text-align: center;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.artista a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.artista a:hover {
+    color: #007BFF; 
+}
+
+.artista img {
+    max-width: 100%;
+    height: auto; 
+    width: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease, opacity 0.3s ease; 
+}
+
+.imagen-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.artista:hover .imagen-normal {
+    opacity: 0;
+    transform: scale(1.1); 
+}
+
+.artista:hover .imagen-hover {
+    opacity: 1; 
+    transform: scale(1.1);
+}
+
+.artista p {
+    margin: 10px 0 5px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .artista {
+        flex: 1 1 45%; 
+    }
+}
+
+@media (max-width: 480px) {
+    .artista {
+        flex: 1 1 100%; 
+    }
+}
+
+
+@media (max-width: 768px) {
+    .detalle-pelicula {
+        flex-direction: column;
+    }
+
+    .info-pelicula {
+        padding: 10px;
+    }
+}
